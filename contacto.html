@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/website/css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="/website/js/scripts.js"></script>
+    <script src="/website/js/forms.js"></script>
+    <link rel="stylesheet" href="/website/font-awesome/css/fontawesome.min.css">
+    <script src="https://kit.fontawesome.com/84237c76d4.js" crossorigin="anonymous"></script>
+    <title>Formulario de contacto</title>
+    
+</head>
+<header>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            WiFi 6
+          </div> 
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+            <a href="/website/index.html"><i class="fa-solid fa-house"></i> Inicio </a>
+            <a href="/website/conceptos.html"><i class="fa-solid fa-wifi"></i> Conceptos</a>
+            <a href="#3"><i class="fa-solid fa-circle-right"></i> Qué sigue</a>
+            <a href="/website/contacto.html"><i class="fa-regular fa-address-book"></i> Contacto</a>
+        </div>
+      </div>
+</header>
+<body>
+    <article>
+<section id="section_formulario">
+    <form action = "/cgi-bin/test.cgi" name = "myForm" onsubmit = "return(validate());">
+        <table cellspacing = "2" cellpadding = "2" border = "1">
+        <tr>
+            <td align = "right">Nombre</td>
+            <td><input type = "text" name = "Name" /></td>
+        </tr>
+        <tr>
+            <td align = "right">eMail</td>
+            <td><input type = "text" name = "EMail" /></td>
+        </tr>
+
+        <tr>
+            <td align = "right">Provincia</td>
+            <td><input type = "text" name = "Provincia" /></td>
+        </tr>
+
+        <tr>
+            <td align="right">País</td>
+            <td>
+                <select name = "Country">
+                    <option value = "-1" selected>[Elije el tuyo]</option>
+                    <option value = "1">Argentina</option>
+                    <option value = "2">Brasil</option>
+                    <option value = "3">Chile</option>
+                </select>
+            </td>
+        </tr>
+
+        <tr>
+            <td align = "right"></td>
+            <td><input type = "submit" value = "Submit" /></td>
+        </tr>
+
+        </table>
+    </form>  
+    
+    </section>
+</article>
+</body>
+</html>
