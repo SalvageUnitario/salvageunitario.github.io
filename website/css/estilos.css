@@ -6,53 +6,45 @@
     word-wrap: break-word;
 }
 
-header {
-    width: 1024px;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 10px;
-}
-
 /*-------BOTONERA-------*/
 .nav {
     height: 50px;
-    width: 100%;
+    max-width: 1024px;
     background-color: #4d4d4d;
-    position: relative;
-  }
-  .nav > .nav-header {
+    margin: auto;
+}
+.nav > .nav-header {
     display: inline;
-  }
+}
 
-  .nav > .nav-header > .nav-title {
+.nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 30px;
     color: #fff;
     padding: 10px 10px 10px 10px;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
-  }
+}
 
-  .nav > .nav-links {
+.nav > .nav-links {
     display: inline;
     float: right;
     font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
-  }
-  .nav > .nav-links > a {
+}
+.nav > .nav-links > a {
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
     color: #efefef;
-  }
-  .nav > .nav-links > a:hover {
+}
+.nav > .nav-links > a:hover {
     background-color: rgba(0, 0, 0, 0.3);
-  }
-  
-  .nav > .nav-btn,
+}
+
+.nav > .nav-btn,
 .nav > #nav-check {
-  display: none;
+display: none;
 }
 
 #contenido_principal {
@@ -245,14 +237,12 @@ header {
 @media (min-width:600px) and (max-width: 1023px)  { 
     /* tablets */ 
 
-
-    #header {
-        width: 580px;
-        height: 70px;
-        margin-left: auto;
-        margin-right: auto;
+    .nav {
+        height: 50px;
+        max-width: 580px;
+        background-color: #4d4d4d;
+        margin: auto;
     }
-
 
     #contenido_principal {
         width: 580px;
@@ -360,6 +350,132 @@ header {
     }
 }
 
+
+@media (max-width: 599px) {
+
+.nav > .nav-btn {
+display: inline-block;
+position: absolute;
+right: 0px;
+top: 0px;
+}
+.nav > .nav-btn > label {
+display: inline-block;
+width: 50px;
+height: 50px;
+padding: 13px;
+}
+.nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+background-color: rgba(0, 0, 0, 0.3);
+}
+.nav > .nav-btn > label > span {
+display: block;
+width: 25px;
+height: 10px;
+border-top: 2px solid #eee;
+}
+.nav > .nav-links {
+position: absolute;
+display: block;
+width: 100%;
+background-color: #333;
+height: 0px;
+transition: all 0.3s ease-in;
+overflow-y: hidden;
+top: 50px;
+left: 0px;
+}
+.nav > .nav-links > a {
+    display: block;
+    width: 100%;
+}
+.nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+}
+.nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+}
+
+#contenido_principal {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+#titulo_main {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 8px;
+}
+    
+#articulo {
+    width: 100%;
+    height: auto;
+    float: center;
+    margin-top: 10px;
+}
+    
+#img1 {
+    width: 100%;
+    height: auto;
+    float: none;
+    background-image: url(/website/img/img1.png);
+}
+    
+#articulo2 {
+    width: 100%;
+    height: auto;
+    float: center;
+    margin-top: 0px;
+}
+    
+#img2 {
+    width: 80%;
+    height: auto;
+    float: none;
+    background-image: url(/website/img/wifi6-concurrency2.png);
+}
+    
+#imagen_logo {
+    display: none;
+
+}
+
+#video {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;    
+    margin-top: 10px
+}
+    
+#video_caja {
+    width: 100%;
+    height: auto;
+    background-color: lightgreen;
+    float: left;
+    margin-top: 1px;
+    margin-bottom: 50px;
+}
+    
+#video_wifi6 {
+    width: auto;
+    height: auto;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-right: auto;
+    padding: 20px;
+    margin-left: auto;
+    display: block
+    
+}
+#parrafos {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 7px;
+}
+
+
+}
+
 /*----ANIMACIONES-------*/
 
 img:hover{
@@ -370,134 +486,8 @@ img:hover{
     transform: scale(1.5)
 }
 
-/*-----CSS PARA DISTINTOS DISPOSITIVOS-----*/
-@media (max-width: 599px) {
-
-    .nav > .nav-btn {
-    display: inline-block;
-    position: absolute;
-    right: 0px;
-    top: 0px;
-}
-    .nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-}
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-    background-color: rgba(0, 0, 0, 0.3);
-}
-    .nav > .nav-btn > label > span {
-    display: block;
-    width: 25px;
-    height: 10px;
-    border-top: 2px solid #eee;
-}
-    .nav > .nav-links {
-    position: absolute;
-    display: block;
-    width: 100%;
-    background-color: #333;
-    height: 0px;
-    transition: all 0.3s ease-in;
-    overflow-y: hidden;
-    top: 50px;
-    left: 0px;
-}
-    .nav > .nav-links > a {
-        display: block;
-        width: 100%;
-    }
-        .nav > #nav-check:not(:checked) ~ .nav-links {
-        height: 0px;
-    }
-        .nav > #nav-check:checked ~ .nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-    }
-
-    #contenido_principal {
-        width: 480px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 10px;
-    }
-    #titulo_main {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 8px;
-    }
-    
-    #articulo {
-        width: 100%;
-        height: auto;
-        float: center;
-        margin-top: 10px;
-    }
-    
-    #img1 {
-        width: 100%;
-        height: auto;
-        float: none;
-        background-image: url(/website/img/img1.png);
-    }
-    
-    #articulo2 {
-        width: 100%;
-        height: auto;
-        float: center;
-        margin-top: 0px;
-    }
-    
-    #img2 {
-        width: 80%;
-        height: auto;
-        float: none;
-        background-image: url(/website/img/wifi6-concurrency2.png);
-    }
-    
-    #imagen_logo {
-        display: none;
-        
-    }
-
-    #video {
-        width: 480px;
-        margin-left: auto;
-        margin-right: auto;    
-        margin-top: 10px
-    }
-    
-    #video_caja {
-        width: 100%;
-        height: auto;
-        background-color: lightgreen;
-        float: left;
-        margin-top: 1px;
-        margin-bottom: 50px;
-    }
-    
-    #video_wifi6 {
-        width: auto;
-        height: auto;
-        margin-top: 1px;
-        margin-bottom: 10px;
-        margin-right: auto;
-        padding: 20px;
-        margin-left: auto;
-        display: block
-        
-    }
-    #parrafos {
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 7px;
-    }
-
-
-}
-
 /*-------MODAL IMAGENES---------*/
-/* Style the Image Used to Trigger the Modal */
+
 #myImg {
     border-radius: 5px;
     cursor: pointer;
